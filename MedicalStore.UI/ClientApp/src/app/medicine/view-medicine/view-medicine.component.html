@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="card container-fluid">
+      <div class="card-header">
+        <h3>Product Details</h3>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Brand</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Expiry Date</th>
+              <th scope="col" colspan="3" class="text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <th scope="row">{{ medicine.Id }}</th>
+              <td>{{ medicine.name }}</td>
+              <td>{{ medicine.brand }}</td>
+              <td>{{ medicine.price | number }}</td>
+              <td>{{ medicine.quantity | number }}</td>
+              <td>{{ medicine.expiryDate | date }}</td>
+              <td><a href="#" class="btn-link" [routerLink]="['/newproduct']"><i class="fa fa-view"></i>View</a></td>
+              <td><a href="#" class="btn-link"><i class="fa fa-view"></i>Edit</a></td>
+              <td><a href="#" class="btn-link"><i class="fa fa-view"></i>Delete</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer">
+
+      </div>
+    </div>
+  </div>
+</div>

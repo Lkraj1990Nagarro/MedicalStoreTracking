@@ -1,0 +1,30 @@
+USE [master]
+GO
+/****** Object:  Database [MedicalStore]    Script Date: 31-10-2020 13:36:52 ******/
+CREATE DATABASE [MedicalStore]
+GO
+USE [MedicalStore]
+GO
+/****** Object:  Table [dbo].[Medicine]    Script Date: 31-10-2020 13:36:52 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Medicine](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](max) NOT NULL,
+	[Brand] [varchar](50) NOT NULL,
+	[Price] [numeric](10, 2) NOT NULL,
+	[Quantity] [int] NOT NULL,
+	[ExpiryDate] [datetime] NOT NULL,
+	[Notes] [varchar](max) NOT NULL,
+ CONSTRAINT [PK_Medicine] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+USE [master]
+GO
+ALTER DATABASE [MedicalStore] SET  READ_WRITE 
+GO
